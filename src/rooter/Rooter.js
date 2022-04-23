@@ -30,7 +30,7 @@ function Rooter() {
             data = json;
         }
         else {
-            const result = await axios(`http://gateway.marvel.com/v1/public/characters?ts=1&apikey=6fc2d005ff2338e7833c49790755ed4c&hash=${hash}&offset=${20 * currentPage - 20}`);
+            const result = await axios(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=6fc2d005ff2338e7833c49790755ed4c&hash=${hash}&offset=${20 * currentPage - 20}`);
 
             sessionStorage.setItem(`page-${currentPage}`, JSON.stringify(result.data.data));
 
